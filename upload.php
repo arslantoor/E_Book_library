@@ -1,14 +1,14 @@
 <?php
 include 'db_connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $upload_dir = "/assets/uploads/";
+    $upload_dir = "uploads/";
     
     $name = $_POST["name"];
     $Author_name = $_POST["author_name"];
     $book_isbn = $_POST["book_isbn"];
     $cover_image = $_FILES["cover_image"];
 
-    $img_name = basename($_FILES['cover_image']['name']);
+    $img_name = $_FILES['cover_image']['name'];
     $error = $_FILES['cover_image']['error'];
     $image_path = $_FILES['cover_image']['tmp_name'];
     
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        $img_ex = pathinfo($img_name,PATHINFO_EXTENSION);
        $img_ext_lc = strtolower($img_ex);
        $new_img_name = uniqid("img-",true).'.'.$img_ext_lc;
-       $img_upload = $upload_dir.basename($img_name);
+       $img_upload = $upload_dir.basename($new_img_name);
 
        move_uploaded_file($image_path, $img_upload);
        //insert into db

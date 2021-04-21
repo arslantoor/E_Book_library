@@ -11,7 +11,6 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.82.0">
-    <link rel="shortcut icon" href="assets/brand/logo.png" />
     <title>E-Library</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
@@ -47,7 +46,7 @@
               foreach ($Books as $book){ ?>
 
                   <div class="d-flex text-muted pt-3" id="data">
-                  <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="215vw" height="215vw" src="assets/brand/nora.jpg" role="img">
+                  <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="215" height="215" src="uploads/<?php echo $book['cover_image']?>" role="img">
             
                   <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                     <div class="d-flex justify-content-between">
