@@ -1,14 +1,14 @@
 <?php
 include 'db_connection.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $upload_dir = "assets/uploads";
+    $upload_dir = "/assets/uploads/";
     
     $name = $_POST["name"];
     $Author_name = $_POST["author_name"];
     $book_isbn = $_POST["book_isbn"];
     $cover_image = $_FILES["cover_image"];
 
-    $img_name = $_FILES['cover_image']['name'];
+    $img_name = basename($_FILES['cover_image']['name']);
     $error = $_FILES['cover_image']['error'];
     $image_path = $_FILES['cover_image']['tmp_name'];
     
@@ -32,6 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   } 
   else{
-            echo "else working";
+            echo "working";
         }
 ?>

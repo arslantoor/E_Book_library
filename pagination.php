@@ -17,7 +17,7 @@ $sql_query = "SELECT * from mybooks ORDER BY id DESC LIMIT {$offset},{$limit_per
             foreach ($Books as $book){
                 $output.="
                 <div class='d-flex text-muted pt-3' id='data' >
-                <img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='32' height='32' src='{$book["cover_image"]}' role='img'>
+                <img class='bd-placeholder-img flex-shrink-0 me-2 rounded' width='215vw' height='215vw' src='assets/brand/nora.jpg' role='img'>
           
                 <div class='pb-3 mb-0 small lh-sm border-bottom w-100'>
                   <div class='d-flex justify-content-between'>

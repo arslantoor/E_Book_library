@@ -19,14 +19,18 @@ $(document).ready(function(){
     });
     
     $(document).on('click', '.delete-book', function (){
-        var data_id = $(this).attr("id");
-        $.ajax({
-            url: "crud/delete.php",
-            type: "POST",
-            data: {id : data_id},
-            dataType: "html",
-            success:$(this).closest("#data").remove()
-        });
+        $confirm = confirm("Are you sure To Delete This Record")
+        if ($confirm==true){ 
+            var data_id = $(this).attr("id");
+            $.ajax({
+                url: "crud/delete.php",
+                type: "POST",
+                data: {id : data_id},
+                dataType: "html",
+                success:$(this).closest("#data").remove()
+            });
+        }
+        
     })
    
 });

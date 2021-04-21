@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.82.0">
+    <link rel="shortcut icon" href="assets/brand/logo.png" />
     <title>E-Library</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
@@ -36,7 +37,7 @@
 
 
   <div class="my-3 p-3 bg-body rounded shadow-sm">
-    <h6 class="border-bottom pb-2 mb-0">Suggestions</h6>
+    <h6 class="border-bottom pb-2 mb-0">Available Books</h6>
   
     <div id="table-data">
     </div>
